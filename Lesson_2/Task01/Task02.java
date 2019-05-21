@@ -11,6 +11,8 @@ public class Task02 {
         DataTypesTester.testDouble();
         DataTypesTester.testChar();
         DataTypesTester.testBoolean();
+        DataTypesTester.testString();
+        DataTypesTester.testRefer();
 
     }
 }
