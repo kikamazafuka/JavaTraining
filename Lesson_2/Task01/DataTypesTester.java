@@ -1260,4 +1260,48 @@ public class DataTypesTester {
         c = bool;
 
     }
+     public static void testString() {
+        String a = "true", b = "false", c;
+        System.out.println("\n***** Arithmetical Operators *****");
+// addition
+        c = a + b;
+        System.out.printf("%s + %s = %s\n", a, b, c);
+
+        System.out.println("\n***** Assignment Operators *****");
+        c = "string";
+        System.out.printf("%s += %s --> c = %s\n", c, a, c += a);
+
+
+        System.out.println("\n***** Relational Operators *****");
+
+// equal to
+        System.out.printf("%s == %s --> %b\n", a, b, a == b);
+// not equal to
+        System.out.printf("%s != %s --> %b\n", a, b, a != b);
+
+    }
+    
+        public static void testRefer() {
+
+        Student a = new Student("Artur", 10);
+        Student b = new Student("Natallia", 10);
+        Student c;
+
+        System.out.println("\n***** Relational Operators *****");
+
+// equal to
+        System.out.printf("%s == %s --> %b\n", a, b, a == b);
+// not equal to
+        System.out.printf("%s != %s --> %b\n", a, b, a != b);
+
+
+        System.out.println("\n***** Misc Operators *****");
+
+        System.out.println("\n***Instanceof***\n");
+        System.out.println("a instanceof Student --> " + (a instanceof Student));
+
+        System.out.println("\nCondition Operator:");
+        System.out.printf("%s == %s ? %s : %s --> %s\n", a, b, a, b,
+                (a == b ? a : b));
+    }
 }
