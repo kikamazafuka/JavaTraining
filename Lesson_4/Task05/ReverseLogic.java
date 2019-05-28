@@ -2,6 +2,8 @@ package Task_05;
 
 public class ReverseLogic {
 
+   /* Not used
+   
     public static int reverse(int number) {
 
         int a = number % 10 * 1000000;
@@ -20,5 +22,23 @@ public class ReverseLogic {
         int reverseNum = a  + b +  c +  d +  e +  f +  g;
 
         return reverseNum;
+    }*/
+    
+    public static String reverse2(int number) { 
+            
+        int a = number % 10;
+        number /= 10;
+        int b = number % 10;
+        number /= 10;
+        int c = number % 10;
+        number /= 10;
+        int d = number % 10;
+        number /= 10;
+        int e = number % 10;
+        number /= 10;
+        int f = number % 10;
+        int g = number / 10;
+     
+        return "" + a  + b +  c +  d +  e +  f +  g;
     }
 }
