@@ -1,6 +1,6 @@
 public class Printer {
 
-    public static void print(boolean equality) {
-        System.out.println("Compared numbers are equal: " + equality);
+    public static void print(String message) {
+        System.out.println(message);
     }
 }
