@@ -16,9 +16,8 @@ public class CalcLogic {
         int e = number % 10;
         number /= 10;
         int f = number % 10;
-
-        double arithm = (a + b + c + d + e + f) / 6d;
-        return arithm;
+     
+        return (a + b + c + d + e + f) / 6d;
     }
 
     // Geometric mean calculation
@@ -35,8 +34,7 @@ public class CalcLogic {
         int e = number % 10;
         number /= 10;
         int f = number % 10;
-
-        double geometr = (a * b * c * d * e * f) / 6d;
-        return geometr;
+      
+        return (a * b * c * d * e * f) / 6d;
     }
 }
