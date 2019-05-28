@@ -5,6 +5,7 @@ public class CalcLogic {
     // Arithmetical mean calculation
     public static double calcArith(int number) {
 
+        double count = 6d;
         int a = number % 10;
         number /= 10;
         int b = number % 10;
@@ -17,12 +18,13 @@ public class CalcLogic {
         number /= 10;
         int f = number % 10;
      
-        return (a + b + c + d + e + f) / 6d;
+        return (a + b + c + d + e + f) / count;
     }
 
     // Geometric mean calculation
     public static double calcGeom(int number) {
 
+        double count = 6d;
         int a = number % 10;
         number /= 10;
         int b = number % 10;
@@ -35,6 +37,6 @@ public class CalcLogic {
         number /= 10;
         int f = number % 10;
       
-        return (a * b * c * d * e * f) / 6d;
+        return (a * b * c * d * e * f) / count;
     }
 }
