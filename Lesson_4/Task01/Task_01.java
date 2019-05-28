@@ -6,6 +6,7 @@ public class Task_01 {
        int b = 1;
        int c = 1;
        boolean d = NumCheck.isEqual(a, b, c);
+       boolean e = NumCheck.isNotEqual(a, b, c);
        Printer.print(d);
 
     }
