@@ -12,7 +12,7 @@ public class SequenceLogic {
         number /= 10;
         int d = number % 10;
 
-        return (d<c)&&(c<b)&&(b<a);
+        return d < c && c < b && b < a;
     }
 
     public  static boolean isDownSeq(int number){
@@ -25,6 +25,6 @@ public class SequenceLogic {
         number /= 10;
         int d = number % 10;
 
-        return (d>c)&&(c>b)&&(b>a);
+        return d > c && c > b && b > a;
     }
 }
