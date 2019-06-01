@@ -5,6 +5,8 @@ public class DragonLife {
     public static void main(String[] args) {
 
         int n = Dragon.headCount(305);
-        View.print("Heads: "+n);
+        int eyes = Dragon.eyesCount(n);
+        View.print("Heads: " + n);
+        View.print("Eyes: " + eyes)
     }
 }
