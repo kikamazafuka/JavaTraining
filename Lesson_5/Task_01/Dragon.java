@@ -24,4 +24,8 @@ public class Dragon {
 
         return recentNumberOfHeads;
     }
+    
+        public static int eyesCount (int heads){
+        return heads*2;
+    }
 }
