@@ -20,8 +20,8 @@ public class HeadsOrTailsLogic {
         return heads;
     }
 
-    public static int countTails(int number, int heads){
-        return number - heads;
+    public static int countTails(int number){
+        return number - countHeads(number);
     }
 
     public static String countHeadsAndTails(int number) {
