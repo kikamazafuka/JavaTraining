@@ -3,23 +3,43 @@ package by.epam.javatraining.artsem.lesson_05.task_02;
 public class LetterLogic {
 
 
-    static boolean isVovel(char letter) {
-        return letter == 97 || letter == 101 || letter == 105 || letter == 111 || letter == 117 || letter == 121
-                  || letter == 65 || letter == 69 || letter == 73 || letter == 79 || letter == 85 || letter==89;
+    static boolean isVovelSecond(char letter) {
+        letter = Character.toLowerCase(letter);
+        return letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'y';
     }
 
-    static boolean isVovel(String letter) {
-        if (letter.length()>1){
-            System.out.println("It's not a letter, type correct data");
-            return false;
+    static boolean isVovelThird(char letter) {
+        letter = Character.toLowerCase(letter);
+        switch (letter) {
+            case 'a':
+                break;
+            case 'e':
+                break;
+            case 'i':
+                break;
+            case 'o':
+                break;
+            case 'u':
+                break;
+            case 'y':
+                break;
+            default:
+                return false;
+
         }
-        char a = letter.toLowerCase().charAt(0);
-        return a == 97 || a == 101 || a == 105 || a == 111 || a == 117 || a == 121;
+        return true;
     }
 
-    static boolean isVovel(double letter) {
-        System.out.println("It's not a letter, type correct data");
-        return false;
+    static boolean isVovelFourth(char letter) {
+        letter = Character.toLowerCase(letter);
+        boolean isVovel = true;
+        char[] arr = {'a', 'i', 'e', 'o', 'u', 'y'};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != letter) {
+                isVovel = false;
+            }
+        }
+        return isVovel;
     }
 }
 
