@@ -4,9 +4,10 @@ public class DragonLife {
 
     public static void main(String[] args) {
 
-        int n = Dragon.headCount(305);
-        int eyes = Dragon.eyesCount(n);
-        View.print("Heads: " + n);
+        int age = 305;
+        int heads = Dragon.headCount(age);
+        int eyes = Dragon.eyesCount(age);
+        View.print("Heads: " + heads);
         View.print("Eyes: " + eyes)
     }
 }
