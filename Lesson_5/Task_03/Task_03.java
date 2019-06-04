@@ -6,8 +6,7 @@ import java.util.Random;
 
 public class Task_03 {
     public static void main(String[] args) {
-
-        
+       
         String str = MoodSensorLogic.guessMood();
         View.print(str);
 
