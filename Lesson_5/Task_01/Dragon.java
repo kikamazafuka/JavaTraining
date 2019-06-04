@@ -2,30 +2,33 @@ package by.epam.javatraining.artsem.lesson_05.task_01;
 
 public class Dragon {
 
-    static int headsOnBirth = 3;
-    static int midAge = 200;
-    static int oldAge = 300;
+    static final int headsOnBirth = 3;
+    static final int headsOnMidAge = 2;
+    static final int midAge = 200;
+    static final int oldAge = 300;
+    static final int eyes = 2;
     static int recentNumberOfHeads;
 
     public static int headCount(int age) {
 
-       // int recentNumberOfHeads = 0;
-        int headstil200 = headsOnBirth + midAge*3;
-        int headstill300 = headstil200 - age%100*2;
-        int headsOver300 = 0;
-
-        if (age > midAge && age < oldAge) {
-            recentNumberOfHeads = headsOnBirth + (age - midAge) * 2 + 600;
+        if (age > midAge && age <= oldAge) {
+            recentNumberOfHeads = headsOnBirth + (age - midAge) * headsOnMidAge
+                    + headsOnBirth * midAge;
         } else if (age > oldAge) {
-            recentNumberOfHeads = headsOnBirth + (age - oldAge) + 800;
+            recentNumberOfHeads = headsOnBirth + age - oldAge + (oldAge - midAge) * headsOnMidAge
+                    + midAge * headsOnBirth;
 
-        } else recentNumberOfHeads = headsOnBirth + age * 3;
+        } else recentNumberOfHeads = headsOnBirth + age * headsOnBirth;
+
+        if (age < 0) {
+            recentNumberOfHeads = -1;
+        }
 
 
         return recentNumberOfHeads;
     }
-    
-        public static int eyesCount (int heads){
-        return heads*2;
+
+    public static int eyesCount(int age) {
+        return headCount(age) * eyes;
     }
 }
