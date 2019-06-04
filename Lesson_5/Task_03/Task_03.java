@@ -7,8 +7,8 @@ import java.util.Random;
 public class Task_03 {
     public static void main(String[] args) {
 
-        int a = new Random().nextInt(100);
-        String str = MoodSensorLogic.moodDefine(a);
+        
+        String str = MoodSensorLogic.guessMood();
         View.print(str);
 
     }
