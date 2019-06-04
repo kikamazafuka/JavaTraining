@@ -10,6 +10,10 @@ public class Dragon {
     static int recentNumberOfHeads;
 
     public static int headCount(int age) {
+        
+        if (age < 0) {
+            return -1;
+        }
 
         if (age > midAge && age <= oldAge) {
             recentNumberOfHeads = headsOnBirth + (age - midAge) * headsOnMidAge
@@ -19,11 +23,6 @@ public class Dragon {
                     + midAge * headsOnBirth;
 
         } else recentNumberOfHeads = headsOnBirth + age * headsOnBirth;
-
-        if (age < 0) {
-            recentNumberOfHeads = -1;
-        }
-
 
         return recentNumberOfHeads;
     }
