@@ -46,7 +46,7 @@ public class SequenceLogic {
         return flag;
     }
 
-    public static int [] getArr (int number){
+   /* public static int [] getArr (int number){
         String temp = Integer.toString(number);
         int[] arr = new int[temp.length()];
         boolean flag = true;
@@ -67,5 +67,5 @@ public class SequenceLogic {
         }
 
         return flag;
-    }
+    }*/
 }
