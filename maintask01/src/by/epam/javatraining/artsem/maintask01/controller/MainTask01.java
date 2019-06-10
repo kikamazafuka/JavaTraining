@@ -17,8 +17,8 @@ public class MainTask01 {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{1,4,7,5,4};
-        double [] doubles = new double[]{1,2,3,4,5};
+        int[] array = new int[]{0, 3, 2, 1};
+        double [] doubles = new double[]{1,2,3};
 
 
         int max = VectorLogic.findMax(array);
@@ -32,7 +32,7 @@ public class MainTask01 {
         View.print("Arithmetic mean: " + arithMean);
 
 
-        double geomMean = VectorLogic.findGeomMean(array);
+        double geomMean = VectorLogic.findGeomMean(doubles);
         View.print("Geometric mean: " + geomMean);
 
         boolean isUpSort = VectorLogic.isUpSort(array);
@@ -41,10 +41,10 @@ public class MainTask01 {
         boolean isDownSort = VectorLogic.isDownSort(array);
         View.print("Is Down Sort: " + isDownSort);
 
-        int locMax = VectorLogic.findLocMax(array);
+        int locMax = VectorLogic.findLocMaxPos(array);
         View.print("Loc max position: "+locMax);
 
-        int locMin = VectorLogic.findLocMin(array);
+        int locMin = VectorLogic.findLocMinPos(array);
         View.print("Loc min position: "+locMin);
 
         int[] reverse = VectorLogic.reverse(array);
@@ -65,7 +65,6 @@ public class MainTask01 {
        int [] select = VectorLogic.selectionSort(array);
        View.print(select);
 
-
-
+       
     }
 }
