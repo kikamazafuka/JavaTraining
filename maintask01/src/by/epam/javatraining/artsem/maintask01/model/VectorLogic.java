@@ -1,6 +1,6 @@
-/* Main task 01 v.1.0 by Artur Semenas 09.06.2019
- *
- *
+/** Main task 01 v.1.0 by Artur Semenas 09.06.2019
+ *@author Artur Semenas
+ * @version 1.0
  *
  *
  *
@@ -47,7 +47,7 @@ public class VectorLogic {
         return arithMean;
     }
 
-    public static double findGeomMean(int[] array) {
+    public static double findGeomMean(double[] array) {
 
         double geomMean = 1.0;
 
@@ -84,7 +84,7 @@ public class VectorLogic {
         return isDownSort;
     }
 
-    public static int findLocMax(int[] array) {
+    public static int findLocMaxPos(int[] array) {
 
         int locMaxPosition = 0;
 
@@ -98,7 +98,7 @@ public class VectorLogic {
         return locMaxPosition;
     }
 
-    public static int findLocMin(int[] array) {
+    public static int findLocMinPos(int[] array) {
 
         int locMinPosition = 0;
 
@@ -226,9 +226,7 @@ public class VectorLogic {
         }
         return array;
     }
-
-
-
+    
 }
 
 
