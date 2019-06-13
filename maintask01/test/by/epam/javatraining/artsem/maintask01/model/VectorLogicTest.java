@@ -79,7 +79,7 @@ public class VectorLogicTest {
 
     @Test
     public void linearSearch() {
-        
+
         int[] array = new int[]{1, 7, 9, 25, 2, 19};
         int valueToSearch = 7;
         int expectedPosition = 1;
@@ -142,3 +142,13 @@ public class VectorLogicTest {
         VectorLogic.selectionSort(arr);
         assertArrayEquals(expected, arr);
     }
+
+    @Test
+    public void quickSort() {
+
+        int[] arr = new int[]{3, 2, 1};
+        int[] expected = new int[]{1, 2, 3};
+        VectorLogic.quickSort(arr,0,2);
+        assertArrayEquals(expected, arr);
+    }
+}
