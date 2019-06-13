@@ -1,17 +1,24 @@
-/** Main task 01 v.1.0 by Artur Semenas 09.06.2019
- *@author Artur Semenas
+/**
+ * Main task 01 v.1.0 by Artur Semenas 09.06.2019
+ *
+ * @author Artur Semenas
  * @version 1.0
- *
- *
- *
- *
- * */
+ */
 
 package by.epam.javatraining.artsem.maintask01.model;
 
+import org.apache.log4j.Logger;
+
 public class VectorLogic {
 
+    private static final Logger LOGGER = Logger.getLogger(VectorLogic.class);
+
     public static int findMax(int[] array) {
+        LOGGER.trace("trace");
+
+        if (array.length == 0) {
+            return -1;
+        }
 
         int max = array[0];
 
@@ -26,6 +33,10 @@ public class VectorLogic {
 
     public static int findMin(int[] array) {
 
+        if (array.length == 0) {
+            return -1;
+        }
+
         int min = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -38,27 +49,37 @@ public class VectorLogic {
 
     public static double findArithMean(double[] array) {
 
+        if (array.length == 0) {
+            return -1;
+        }
+
         double arithMean = 0;
 
         for (int i = 0; i < array.length; i++) {
             arithMean += array[i];
         }
-        arithMean /= array.length;
-        return arithMean;
+        return arithMean / array.length;
     }
 
     public static double findGeomMean(double[] array) {
+
+        if (array.length == 0) {
+            return -1;
+        }
 
         double geomMean = 1.0;
 
         for (int i = 0; i < array.length; i++) {
             geomMean *= array[i];
         }
-        geomMean = Math.pow(geomMean, 1.0 / array.length);
-        return geomMean;
+        return Math.pow(geomMean, 1.0 / array.length);
     }
 
     public static boolean isUpSort(int[] array) {
+
+        if (array.length == 0) {
+            return false;
+        }
 
         boolean isUpSort = true;
 
@@ -73,6 +94,10 @@ public class VectorLogic {
 
     public static boolean isDownSort(int[] array) {
 
+        if (array.length == 0) {
+            return false;
+        }
+
         boolean isDownSort = true;
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -85,6 +110,10 @@ public class VectorLogic {
     }
 
     public static int findLocMaxPos(int[] array) {
+
+        if (array.length == 0) {
+            return -1;
+        }
 
         int locMaxPosition = 0;
 
@@ -99,6 +128,10 @@ public class VectorLogic {
     }
 
     public static int findLocMinPos(int[] array) {
+
+        if (array.length == 0) {
+            return -1;
+        }
 
         int locMinPosition = 0;
 
@@ -115,6 +148,10 @@ public class VectorLogic {
 
     public static int linearSearch(int[] array, int elementToSearch) {
 
+        if (array.length == 0) {
+            return -1;
+        }
+
         int result = -1;
 
         for (int i = 0; i < array.length; i++) {
@@ -127,6 +164,10 @@ public class VectorLogic {
 
 
     public static int binarySearch(int array[], int elementToSearch) {
+
+        if (array.length == 0) {
+            return -1;
+        }
 
         int firstIndex = 0;
         int lastIndex = array.length - 1;
@@ -145,18 +186,26 @@ public class VectorLogic {
         return -1;
     }
 
-    public static int[] reverse(int[] array) {
+    public static void reverse(int[] array) {
+
+        if (array.length == 0) {
+            return ;
+        }
 
         for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - 1 - i];
             array[array.length - 1 - i] = temp;
         }
-        return array;
+
     }
 
 
-    public static int[] bubbleUpSort(int[] array) {
+    public static void bubbleUpSort(int[] array) {
+
+        if (array.length == 0) {
+            return ;
+        }
 
         boolean isSorted = false;
 
@@ -172,10 +221,9 @@ public class VectorLogic {
             }
         }
 
-        return array;
     }
 
-    public static int[] bubbleDownSort(int[] array) {
+    public static void bubbleDownSort(int[] array) {
 
         boolean isSorted = false;
 
@@ -191,11 +239,15 @@ public class VectorLogic {
             }
         }
 
-        return array;
+
     }
 
 
-    public static int[] insertionSort(int[] array) {
+    public static void insertionSort(int[] array) {
+
+        if (array.length == 0) {
+            return ;
+        }
 
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
@@ -207,11 +259,15 @@ public class VectorLogic {
             }
             array[j + 1] = min;
         }
-        return array;
+
     }
 
 
-    public static int[] selectionSort(int[] array) {
+    public static void selectionSort(int[] array) {
+
+        if (array.length == 0) {
+            return ;
+        }
 
         for (int i = 0; i < array.length; i++) {
             int min = i;
@@ -221,12 +277,11 @@ public class VectorLogic {
                 }
             }
             int temp = array[i];
-            array[i]=array[min];
-            array[min]=temp;
+            array[i] = array[min];
+            array[min] = temp;
         }
-        return array;
     }
-    
+
 }
 
 
