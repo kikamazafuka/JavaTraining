@@ -47,24 +47,24 @@ public class MainTask01 {
         int locMin = VectorLogic.findLocMinPos(array);
         View.print("Loc min position: "+locMin);
 
-        int[] reverse = VectorLogic.reverse(array);
-        View.print(reverse);
+        VectorLogic.reverse(array);
+        View.print(array);
 
-        int [] bubbleUpSort = VectorLogic.bubbleUpSort(array);
-        View.print(bubbleUpSort);
+        VectorLogic.bubbleUpSort(array);
+        View.print(array);
 
-        int [] bubbleDownSort = VectorLogic.bubbleDownSort(array);
-        View.print(bubbleDownSort);
+        VectorLogic.bubbleDownSort(array);
+        View.print(array);
 
-        int [] ibubbleDownSort = VectorLogic.insertionSort(array);
-        View.print(ibubbleDownSort);
+        VectorLogic.insertionSort(array);
+        View.print(array);
 
         int search = VectorLogic.linearSearch(array, 7);
         View.print("result: "+search);
 
-       int [] select = VectorLogic.selectionSort(array);
-       View.print(select);
+       VectorLogic.selectionSort(array);
+       View.print(array);
 
-       
+
     }
 }
