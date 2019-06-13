@@ -1,6 +1,3 @@
-/**
- * Main task 01 v.1.0 by Artur Semenas 09.06.2019
- *
  * @author Artur Semenas
  * @version 1.0
  */
@@ -8,23 +5,28 @@
 package by.epam.javatraining.artsem.maintask01.model;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class VectorLogic {
 
     private static final Logger LOGGER = Logger.getLogger(VectorLogic.class);
 
     public static int findMax(int[] array) {
-        LOGGER.trace("trace");
+        PropertyConfigurator.configure("log4j.properties");
+        LOGGER.info("trace");
 
         if (array.length == 0) {
+            LOGGER.warn("Incorrect array length");
             return -1;
         }
 
         int max = array[0];
 
         for (int i = 1; i < array.length; i++) {
+            LOGGER.trace("find max" + i);
             if (array[i] > max) {
                 max = array[i];
+
             }
         }
         return max;
@@ -189,7 +191,7 @@ public class VectorLogic {
     public static void reverse(int[] array) {
 
         if (array.length == 0) {
-            return ;
+            return;
         }
 
         for (int i = 0; i < array.length / 2; i++) {
@@ -204,7 +206,7 @@ public class VectorLogic {
     public static void bubbleUpSort(int[] array) {
 
         if (array.length == 0) {
-            return ;
+            return;
         }
 
         boolean isSorted = false;
@@ -246,7 +248,7 @@ public class VectorLogic {
     public static void insertionSort(int[] array) {
 
         if (array.length == 0) {
-            return ;
+            return;
         }
 
         for (int i = 0; i < array.length; i++) {
@@ -266,7 +268,7 @@ public class VectorLogic {
     public static void selectionSort(int[] array) {
 
         if (array.length == 0) {
-            return ;
+            return;
         }
 
         for (int i = 0; i < array.length; i++) {
@@ -281,6 +283,11 @@ public class VectorLogic {
             array[min] = temp;
         }
     }
+
+}
+
+
+
 
 }
 
