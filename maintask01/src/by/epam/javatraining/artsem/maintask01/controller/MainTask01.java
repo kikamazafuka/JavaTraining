@@ -17,7 +17,7 @@ public class MainTask01 {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{0, 3, 2, 1};
+        int[] array = new int[]{1,2,3};
         double [] doubles = new double[]{1,2,3};
 
 
@@ -63,6 +63,9 @@ public class MainTask01 {
         View.print("result: "+search);
 
        VectorLogic.selectionSort(array);
+       View.print(array);
+
+       VectorLogic.quickSort(array,0,2);
        View.print(array);
 
 
