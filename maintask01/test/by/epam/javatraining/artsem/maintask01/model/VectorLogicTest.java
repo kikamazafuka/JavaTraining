@@ -1,9 +1,8 @@
-/** Test Class of VectorLogic class
+/**
+ * Test Class of VectorLogic class
+ *
  * @author Artur Semenas
  * @see#VectorLogic class
- * 
- * 
- * 
  */
 package by.epam.javatraining.artsem.maintask01.model;
 
@@ -80,29 +79,66 @@ public class VectorLogicTest {
 
     @Test
     public void linearSearch() {
+        
+        int[] array = new int[]{1, 7, 9, 25, 2, 19};
+        int valueToSearch = 7;
+        int expectedPosition = 1;
+        assertEquals(expectedPosition, VectorLogic.linearSearch(array, valueToSearch));
     }
 
     @Test
     public void binarySearch() {
+
+        int[] array = new int[]{1, 7, 9, 25, 2, 19};
+        int valueToSearch = 1;
+        int expectedPosition = 0;
+        assertEquals(expectedPosition, VectorLogic.binarySearch(array, valueToSearch));
     }
 
     @Test
     public void reverse() {
+
+        int[] arr = new int[]{3, 2, 1};
+        int[] expected = new int[]{1, 2, 3};
+        VectorLogic.reverse(arr);
+        assertArrayEquals(expected, arr);
+
     }
 
     @Test
     public void bubbleUpSort() {
+
+        int[] arr = new int[]{3, 2, 1};
+        int[] expected = new int[]{1, 2, 3};
+        VectorLogic.bubbleUpSort(arr);
+        assertArrayEquals(expected, arr);
+
     }
 
     @Test
     public void bubbleDownSort() {
+
+        int[] arr = new int[]{3, 1, 2};
+        int[] expected = new int[]{3, 2, 1};
+        VectorLogic.bubbleDownSort(arr);
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     public void insertionSort() {
+
+        int[] arr = new int[]{3, 2, 1};
+        int[] expected = new int[]{1, 2, 3};
+        VectorLogic.insertionSort(arr);
+        assertArrayEquals(expected, arr);
+
     }
 
     @Test
     public void selectionSort() {
+
+        int[] arr = new int[]{3, 2, 1};
+        int[] expected = new int[]{1, 2, 3};
+        VectorLogic.selectionSort(arr);
+        assertArrayEquals(expected, arr);
     }
-}
