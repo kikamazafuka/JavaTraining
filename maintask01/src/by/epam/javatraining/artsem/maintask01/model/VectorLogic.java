@@ -1,3 +1,6 @@
+ /**
+ * Main task 01 v.1.0 by Artur Semenas 09.06.2019
+ *
  * @author Artur Semenas
  * @version 1.0
  */
@@ -13,7 +16,7 @@ public class VectorLogic {
 
     public static int findMax(int[] array) {
         PropertyConfigurator.configure("log4j.properties");
-        LOGGER.info("trace");
+        LOGGER.info("find max");
 
         if (array.length == 0) {
             LOGGER.warn("Incorrect array length");
@@ -34,6 +37,8 @@ public class VectorLogic {
 
 
     public static int findMin(int[] array) {
+
+        LOGGER.debug("find min");
 
         if (array.length == 0) {
             return -1;
@@ -111,6 +116,8 @@ public class VectorLogic {
         return isDownSort;
     }
 
+    //BigO of findMaxPos is O(1)
+
     public static int findLocMaxPos(int[] array) {
 
         if (array.length == 0) {
@@ -128,6 +135,8 @@ public class VectorLogic {
 
         return locMaxPosition;
     }
+
+    //BigO of findMinPos is O(1)
 
     public static int findLocMinPos(int[] array) {
 
@@ -148,6 +157,8 @@ public class VectorLogic {
     }
 
 
+    // BigO of linearSearch is O(n)
+
     public static int linearSearch(int[] array, int elementToSearch) {
 
         if (array.length == 0) {
@@ -164,6 +175,7 @@ public class VectorLogic {
         return result;
     }
 
+    // BigO of binarySearch is O(log(n))
 
     public static int binarySearch(int array[], int elementToSearch) {
 
@@ -188,6 +200,8 @@ public class VectorLogic {
         return -1;
     }
 
+    // BigO of reverse is O(n)
+
     public static void reverse(int[] array) {
 
         if (array.length == 0) {
@@ -202,7 +216,8 @@ public class VectorLogic {
 
     }
 
-
+    //BigO of bubbleSort is O(n^2)
+    
     public static void bubbleUpSort(int[] array) {
 
         if (array.length == 0) {
@@ -244,6 +259,7 @@ public class VectorLogic {
 
     }
 
+    //BigO of insertionSort is O(n^2)
 
     public static void insertionSort(int[] array) {
 
@@ -264,6 +280,7 @@ public class VectorLogic {
 
     }
 
+    //BigO of selectionSort is O(n^2)
 
     public static void selectionSort(int[] array) {
 
@@ -285,11 +302,3 @@ public class VectorLogic {
     }
 
 }
-
-
-
-
-}
-
-
-
