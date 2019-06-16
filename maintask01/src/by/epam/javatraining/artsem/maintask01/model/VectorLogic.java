@@ -180,13 +180,18 @@ public class VectorLogic {
         return result;
     }
 
-    // BigO of binarySearch is O(log(n))
+      // BigO of binarySearch is O(log(n))
 
     public static int binarySearch(int array[], int elementToSearch) {
 
+        LOGGER.info("Binary search");
+
         if (array.length == 0) {
+            LOGGER.warn("Incorrect array length");
             return -1;
         }
+
+        bubbleUpSort(array);
 
         int firstIndex = 0;
         int lastIndex = array.length - 1;
@@ -204,7 +209,7 @@ public class VectorLogic {
         }
         return -1;
     }
-
+    
     // BigO of reverse is O(n)
 
     public static void reverse(int[] array) {
