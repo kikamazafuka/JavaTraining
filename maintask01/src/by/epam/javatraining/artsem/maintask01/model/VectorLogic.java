@@ -223,22 +223,37 @@ public class VectorLogic {
 
     //BigO of bubbleSort is O(n^2)
 
-    public static void bubbleUpSort(int[] array) {
+     public static void bubbleUpSort(int[] array) {
+
+        LOGGER.info("Bubblu sort UP");
 
         if (array.length == 0) {
+            LOGGER.warn("Incorrect array length");
             return;
         }
 
-        boolean isSorted = false;
+       /* boolean isSorted = false; //alternative way of bubble sort
+        int length = array.length;
 
         while (!isSorted) {
             isSorted = true;
-            for (int j = 1; j < array.length; j++) {
+            for (int j = 1; j < length; j++) {
                 if (array[j] < array[j - 1]) {
                     isSorted = false;
                     int temp = array[j];
                     array[j] = array[j - 1];
                     array[j - 1] = temp;
+                }
+            }
+            length--;
+        }*/
+
+        for (int i = array.length - 1; i > 1; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
@@ -259,6 +274,7 @@ public class VectorLogic {
                     array[j - 1] = temp;
                 }
             }
+            
         }
 
 
