@@ -264,9 +264,10 @@ public class VectorLogic {
 
         boolean isSorted = false;
 
+        int length = array.length;
         while (!isSorted) {
             isSorted = true;
-            for (int j = 1; j < array.length; j++) {
+            for (int j = 1; j < length; j++) {
                 if (array[j] > array[j - 1]) {
                     isSorted = false;
                     int temp = array[j];
@@ -274,10 +275,9 @@ public class VectorLogic {
                     array[j - 1] = temp;
                 }
             }
-            
+            length--;
         }
-
-
+        
     }
 
     //BigO of insertionSort is O(n^2)
