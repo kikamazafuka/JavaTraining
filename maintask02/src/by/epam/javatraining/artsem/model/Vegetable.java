@@ -17,10 +17,6 @@ public class Vegetable {
 
 
     public Vegetable(String name, double calories) {
-        if (calories < 0) {
-            throw new IllegalArgumentException("Cannot create vegetable with " //!!!!!!!!!!!!!! exception change Logger
-                    + calories + "kcal");
-        }
 
         this.name = name;
         this.calories = calories;
@@ -28,15 +24,6 @@ public class Vegetable {
     }
 
     public Vegetable(String name, double calories, double weight) {
-        if (calories < 0) {
-            throw new IllegalArgumentException("Cannot create vegetable with "  //!!!!!!!!!!!!!! exception change Logger
-                    + calories + "kcal");
-        }
-
-        if (weight < Double.MIN_NORMAL) {
-            throw new IllegalArgumentException("Cannot create " + weight //!!!!!!!!!!!!!! exception change Logger
-                    + "g of " + name);
-        }
 
         this.name = name;
         this.calories = calories;
