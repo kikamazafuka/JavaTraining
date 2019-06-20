@@ -59,6 +59,6 @@ public class Vegetable {
     }
 
     public String toString() {
-        return name + " " + weight + " gramms " + "contains " + countCalories() + " kcal";
+        return "" + name + " " + weight + " gramms " + "contains " + countCalories() + " kcal";
     }
 }
