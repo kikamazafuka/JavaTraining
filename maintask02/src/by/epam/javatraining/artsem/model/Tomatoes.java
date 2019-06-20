@@ -1,3 +1,13 @@
+/** Chief aplication. Create Salad
+ * @author Artur Semenas
+ * @version 1.0 17.06.2019
+ *class describes Tomatoes
+ *
+ *
+ *
+ * */
+
+
 package by.epam.javatraining.artsem.maintask02.model;
 
 public class Tomatoes extends Vegetable {
@@ -15,6 +25,6 @@ public class Tomatoes extends Vegetable {
 
         super(name, calories, weight);
     }
-
-
+    
 }
+
