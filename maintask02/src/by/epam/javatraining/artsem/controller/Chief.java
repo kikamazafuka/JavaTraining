@@ -12,6 +12,7 @@ import by.epam.javatraining.artsem.maintask02.model.Cucumber;
 import by.epam.javatraining.artsem.maintask02.model.Salads;
 import by.epam.javatraining.artsem.maintask02.model.Tomatoes;
 import by.epam.javatraining.artsem.maintask02.model.Vegetable;
+import by.epam.javatraining.artsem.maintask02.view.View;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -29,6 +30,10 @@ public class Chief {
 
         Cucumber cucumber = new Cucumber();
         cucumber.setName("Big cuc");
+        cucumber.setCalories(142);
+
+        double cucColories = cucumber.getCalories();
+        LOGGER.info(cucColories);
 
         Tomatoes tamat = new Tomatoes();
 
@@ -49,8 +54,14 @@ public class Chief {
         for (int i = 0; i < veg.size(); i++) {
 
             LOGGER.info(veg.get(i));
-
         }
+
+        double salCalories = sal.countSaladCalories();
+
+        LOGGER.info(salCalories);
+
+        View.print(veg);
 
     }
 }
+
