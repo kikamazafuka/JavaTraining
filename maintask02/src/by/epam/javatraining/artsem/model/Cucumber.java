@@ -1,3 +1,12 @@
+/** Chief aplication. Create Salad
+ * @author Artur Semenas
+ * @version 1.0 17.06.2019
+ *class describes Cucumber
+ *
+ *
+ *
+ * */
+
 package by.epam.javatraining.artsem.maintask02.model;
 
 public class Cucumber extends Vegetable {
@@ -15,6 +24,7 @@ public class Cucumber extends Vegetable {
 
         super(name, calories, weight);
     }
+
 
 
 }
